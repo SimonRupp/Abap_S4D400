@@ -1,0 +1,120 @@
+@Metadata.layer: #CORE
+@UI.headerInfo.typeName: 'Projection CDS View for ZR_T_BOOKINGS'
+@UI.headerInfo.typeNamePlural: 'Projection CDS View for ZR_T_BOOKINGS'
+@UI.headerInfo.title.type: #STANDARD
+@UI.headerInfo.title.value: 'TravelId'
+@UI.headerInfo.description.type: #STANDARD
+@UI.headerInfo.description.value: 'TravelId'
+annotate view ZC_T_BOOKINGS with
+{
+  @UI.facet: [ {
+    label: 'General Information', 
+    id: 'GeneralInfo', 
+    purpose: #STANDARD, 
+    position: 10 , 
+    type: #IDENTIFICATION_REFERENCE
+  } ]
+  @UI.identification: [ {
+    position: 10 , 
+    label: 'TravelId'
+  } ]
+  @UI.lineItem: [ {
+    position: 10 , 
+    label: 'TravelId'
+  } ]
+  @UI.selectionField: [ {
+    position: 10 
+  } ]
+  TravelId;
+  
+  @UI.identification: [ {
+    position: 20 , 
+    label: 'BookingId'
+  } ]
+  @UI.lineItem: [ {
+    position: 20 , 
+    label: 'BookingId'
+  } ]
+  @UI.selectionField: [ {
+    position: 20 
+  } ]
+  BookingId;
+  
+  @UI.identification: [ {
+    position: 30 , 
+    label: 'BookingDate'
+  } ]
+  @UI.lineItem: [ {
+    position: 30 , 
+    label: 'BookingDate'
+  } ]
+  @UI.selectionField: [ {
+    position: 30 
+  } ]
+  BookingDate;
+  
+  @UI.identification: [ {
+    position: 40 , 
+    label: 'CustomerId'
+  } ]
+  @UI.lineItem: [ {
+    position: 40 , 
+    label: 'CustomerId'
+  } ]
+  @UI.selectionField: [ {
+    position: 40 
+  } ]
+  CustomerId;
+  
+  @UI.identification: [ {
+    position: 50 , 
+    label: 'CarrierId'
+  } ]
+  @UI.lineItem: [ {
+    position: 50 , 
+    label: 'CarrierId'
+  } ]
+  @UI.selectionField: [ {
+    position: 50 
+  } ]
+  CarrierId;
+  
+  @UI.identification: [ {
+    position: 60 , 
+    label: 'ConnectionId'
+  } ]
+  @UI.lineItem: [ {
+    position: 60 , 
+    label: 'ConnectionId'
+  } ]
+  @UI.selectionField: [ {
+    position: 60 
+  } ]
+  ConnectionId;
+  
+  @UI.identification: [ {
+    position: 70 , 
+    label: 'FlightDate'
+  } ]
+  @UI.lineItem: [ {
+    position: 70 , 
+    label: 'FlightDate'
+  } ]
+  @UI.selectionField: [ {
+    position: 70 
+  } ]
+  FlightDate;
+  
+  @UI.identification: [ {
+    position: 80 , 
+    label: 'FlightPrice'
+  } ]
+  @UI.lineItem: [ {
+    position: 80 , 
+    label: 'FlightPrice'
+  } ]
+  @UI.selectionField: [ {
+    position: 80 
+  } ]
+  FlightPrice;
+}

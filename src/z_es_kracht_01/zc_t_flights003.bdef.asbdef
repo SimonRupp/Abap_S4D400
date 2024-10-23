@@ -1,0 +1,24 @@
+projection;
+strict ( 2 );
+use draft;
+
+define behavior for ZC_T_FLIGHTS003 //alias <alias_name>
+{
+
+
+  use action Activate;
+  use action Discard;
+  use action Edit;
+  use action Resume;
+  use action Prepare;
+
+  use association _Booking { create; with draft; }
+}
+
+define behavior for ZC_T_BOOKINGS002 //alias <alias_name>
+{
+  use update;
+  use delete;
+
+  use association _Flight { with draft; }
+}

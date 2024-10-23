@@ -1,0 +1,129 @@
+@Metadata.layer: #CORE
+@UI.headerInfo.typeName: 'Projection CDS View for ZR_T_FLIGHTS'
+@UI.headerInfo.typeNamePlural: 'Projection CDS View for ZR_T_FLIGHTS'
+@UI.headerInfo.title.type: #STANDARD
+@UI.headerInfo.title.value: 'CarrierId'
+@UI.headerInfo.description.type: #STANDARD
+@UI.headerInfo.description.value: 'CarrierId'
+annotate view ZC_T_FLIGHTS000 with
+{
+  @UI.facet: [ {
+    label: 'General Information', 
+    id: 'GeneralInfo', 
+    purpose: #STANDARD, 
+    position: 10 , 
+    type: #IDENTIFICATION_REFERENCE
+  }, 
+  {
+    label: 'Items', 
+    id: 'Items', 
+    purpose: #STANDARD, 
+    position: 11 , 
+    type: #LINEITEM_REFERENCE, 
+    targetElement: '_Booking'
+  } ]
+  @UI.identification: [ {
+    position: 10 , 
+    label: 'CarrierId'
+  } ]
+  @UI.lineItem: [ {
+    position: 10 , 
+    label: 'CarrierId'
+  } ]
+  @UI.selectionField: [ {
+    position: 10 
+  } ]
+  CarrierId;
+  
+  @UI.identification: [ {
+    position: 20 , 
+    label: 'ConnectionId'
+  } ]
+  @UI.lineItem: [ {
+    position: 20 , 
+    label: 'ConnectionId'
+  } ]
+  @UI.selectionField: [ {
+    position: 20 
+  } ]
+  ConnectionId;
+  
+  @UI.identification: [ {
+    position: 30 , 
+    label: 'FlightDate'
+  } ]
+  @UI.lineItem: [ {
+    position: 30 , 
+    label: 'FlightDate'
+  } ]
+  @UI.selectionField: [ {
+    position: 30 
+  } ]
+  FlightDate;
+  
+  @UI.identification: [ {
+    position: 40 , 
+    label: 'Price'
+  } ]
+  @UI.lineItem: [ {
+    position: 40 , 
+    label: 'Price'
+  } ]
+  @UI.selectionField: [ {
+    position: 40 
+  } ]
+  Price;
+  
+  @UI.identification: [ {
+    position: 50 , 
+    label: 'PlaneTypeId'
+  } ]
+  @UI.lineItem: [ {
+    position: 50 , 
+    label: 'PlaneTypeId'
+  } ]
+  @UI.selectionField: [ {
+    position: 50 
+  } ]
+  PlaneTypeId;
+  
+  @UI.identification: [ {
+    position: 60 , 
+    label: 'SeatsMax'
+  } ]
+  @UI.lineItem: [ {
+    position: 60 , 
+    label: 'SeatsMax'
+  } ]
+  @UI.selectionField: [ {
+    position: 60 
+  } ]
+  SeatsMax;
+  
+  @UI.identification: [ {
+    position: 70 , 
+    label: 'SeatsOccupied'
+  } ]
+  @UI.lineItem: [ {
+    position: 70 , 
+    label: 'SeatsOccupied'
+  } ]
+  @UI.selectionField: [ {
+    position: 70 
+  } ]
+  SeatsOccupied;
+  
+  @EndUserText.label: 'SeatPercentage'
+  @UI.identification: [ {
+    position: 80 , 
+    label: 'SeatPercentage'
+  } ]
+  @UI.lineItem: [ {
+    position: 80 , 
+    label: 'SeatPercentage'
+  } ]
+  @UI.selectionField: [ {
+    position: 80 
+  } ]
+  SeatPercentage;
+}

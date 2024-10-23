@@ -1,0 +1,126 @@
+@Metadata.layer: #CORE
+@UI.headerInfo.typeName: 'Buchung'
+@UI.headerInfo.typeNamePlural: 'Buchung'
+@UI.headerInfo.title.type: #STANDARD
+@UI.headerInfo.title.value: 'headerstring'
+@UI.headerInfo.description.type: #STANDARD
+@UI.headerInfo.description.value: 'FlightDate'
+annotate view ZC_T_BOOKINGS002 with
+{
+  @UI.facet: [ {
+    label: 'Fluginformationen', 
+    id: 'GeneralInfo', 
+    purpose: #STANDARD, 
+    position: 10 , 
+    type: #IDENTIFICATION_REFERENCE
+  } ]
+  @UI.identification: [ {
+    position: 10 , 
+    label: 'Buchungsnummer'
+  } ]
+  @UI.lineItem: [ {
+    position: 10 , 
+    label: 'Buchungsnummer'
+  } ]
+  @UI.selectionField: [ {
+    position: 10 
+  } ]
+  BookingIDNumber;
+  
+  
+  
+  @UI.identification: [ {
+    position: 30 , 
+    label: 'Buchungsdatum'
+  } ]
+  @UI.lineItem: [ {
+    position: 30 , 
+    label: 'Buchungsdatum'
+  } ]
+  @UI.selectionField: [ {
+    position: 30 
+  } ]
+  BookingDate;
+  
+  @UI.identification: [ {
+    position: 20 , 
+    label: 'Kundennummer'
+  } ]
+  @UI.lineItem: [ {
+    position: 20 , 
+    label: 'Kundennummer'
+  } ]
+  @UI.selectionField: [ {
+    position: 20 
+  } ]
+  CustomerId;
+  @UI.identification: [ {
+    position: 21 , 
+    label: 'Kundenname'
+  } ]
+  @UI.lineItem: [ {
+    position: 21 , 
+    label: 'Kundenname'
+  } ]
+  @UI.selectionField: [ {
+    position: 21
+  } ]
+  CustomerFullName;
+  
+  @UI.identification: [ {
+    position: 50 , 
+    label: 'Fluggesellschaft'
+  } ]
+  @UI.lineItem: [ {
+    position: 50 , 
+    label: 'Fluggesellschaft'
+  } ]
+  @UI.selectionField: [ {
+    position: 50 
+  } ]
+   airlinename;
+  
+ 
+  
+  @UI.identification: [ {
+    position: 70 , 
+    label: 'Flugdatum'
+  } ]
+  @UI.lineItem: [ {
+    position: 70 , 
+    label: 'Flugdatum'
+  } ]
+  @UI.selectionField: [ {
+    position: 70 
+  } ]
+  FlightDate;
+  
+  @UI.identification: [ {
+    position: 80 , 
+    label: 'Preis'
+  } ]
+  @UI.lineItem: [ {
+    position: 80 , 
+    label: 'Preis'
+  } ]
+  @UI.selectionField: [ {
+    position: 80 
+  } ]
+  FlightPrice;
+  
+   @UI.identification: [ {
+    position: 9 , 
+    label: 'Storniert'
+  } ]
+  @UI.lineItem: [ {
+    position: 9 , 
+    label: 'Storniert'
+  } ]
+  @UI.selectionField: [ {
+    position: 9 
+  } ]
+   Storniert;
+  
+  
+  
+}

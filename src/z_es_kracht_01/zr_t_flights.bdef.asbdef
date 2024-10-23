@@ -1,0 +1,75 @@
+managed implementation in class zbp_r_t_flights unique;
+strict ( 2 );
+with draft;
+
+define behavior for ZR_T_FLIGHTS //alias <alias_name>
+persistent table zesflight
+draft table zesflight_d
+lock master
+total etag LastChangedAt
+etag master LocalLastChangedAt
+authorization master ( global )
+//etag master <field_name>
+{
+
+  update;
+  field ( readonly ) CarrierId, ConnectionId, FlightDate;
+  association _Booking { create; with draft; }
+
+  draft action Activate optimized;
+
+  draft action Discard;
+  draft action Edit;
+  draft action Resume;
+  draft determine action Prepare;
+
+  validation validateSeats on save { field SeatsOccupied; create; update;}
+
+  mapping for zesflight
+    {
+      CarrierId          = carrier_id;
+      ConnectionID       = connection_id;
+      FlightDate         = flight_date;
+      Price              = price;
+      CurrencyCode       = currency_code;
+      PlaneTypeId        = plane_type_id;
+      SeatsMax           = seats_max;
+      SeatsOccupied      = seats_occupied;
+      LocalLastChangedAt = local_last_changed_at;
+      LastChangedAt      = last_changed_at;
+
+    }
+
+}
+
+define behavior for ZR_T_BOOKINGS //alias <alias_name>
+persistent table zesbooking
+draft table zesbooking_d
+lock dependent by _Flight
+authorization dependent by _Flight
+//etag master <field_name>
+{
+  update;
+  delete;
+  field ( readonly :update ) TravelId, BookingId;
+  field ( readonly ) CarrierID, ConnectionId, FlightDate;
+
+  association _Flight {with draft;}
+
+  determination updateSeats on save { field ConnectionId; field Storniert; field FlightDate; }
+    mapping for zesbooking
+    {
+      BookingDate  = booking_date;
+      BookingId    = booking_id;
+      CarrierId    = carrier_id;
+      ConnectionId = connection_id;
+      CurrencyCode = currency_code;
+      CustomerId   = customer_id;
+      FlightDate   = flight_date;
+      FlightPrice  = flight_price;
+      TravelId     = travel_id;
+      Storniert = cancelld;
+
+    }
+
+}

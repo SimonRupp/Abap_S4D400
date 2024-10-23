@@ -1,0 +1,175 @@
+@Metadata.layer: #CORE
+@UI.headerInfo.typeName: 'Flug'
+@UI.headerInfo.typeNamePlural: 'Flüge'
+@UI.headerInfo.title.type: #STANDARD
+@UI.headerInfo.title.value: 'header'
+@UI.headerInfo.description.type: #STANDARD
+@UI.headerInfo.description.value: 'FlightDate'
+annotate view ZC_T_FLIGHTS003 with
+{
+
+  @UI.facet: [ {
+    label: 'Flug Informationen', 
+    id: 'GeneralInfo', 
+    purpose: #STANDARD, 
+    position: 10 , 
+    type: #IDENTIFICATION_REFERENCE
+  }, 
+  {
+    label: 'Buchungen', 
+    id: 'Items', 
+    purpose: #STANDARD, 
+    position: 11 , 
+    type: #LINEITEM_REFERENCE, 
+    targetElement: '_Booking'
+  } ]
+  @UI.identification: [ {
+    position: 10 , 
+    label: 'Fluggesellschaft'
+  } ]
+  @UI.lineItem: [ {
+    position: 10 , 
+    label: 'Fluggesellschaft'
+  } ]
+  @UI.selectionField: [ {
+    position: 10 
+  } ]
+  AirlineName;
+  
+  
+  
+  @UI.identification: [ {
+    position: 30 , 
+    label: 'Flugdatum'
+  } ]
+  @UI.lineItem: [ {
+    position: 30 , 
+    label: 'Flugdatum'
+  } ]
+  @UI.selectionField: [ {
+    position: 30 
+  } ]
+  FlightDate;
+  
+  @UI.identification: [ {
+    position: 160 , 
+    label: 'Preis'
+  } ]
+  @UI.lineItem: [ {
+    position: 160 , 
+    label: 'Preis'
+  } ]
+  @UI.selectionField: [ {
+    position: 160 
+  } ]
+  Price;
+  
+  @UI.identification: [ {
+    position: 20, 
+    label: 'Maschinen Typ'
+  } ]
+  @UI.lineItem: [ {
+    position: 20 , 
+    label: 'Maschinen Typ'
+  } ]
+  @UI.selectionField: [ {
+    position: 20 
+  } ]
+  PlaneTypeId;
+  
+  
+  
+  @EndUserText.label: 'SeatPercentage'
+  @UI.identification: [ {
+    position: 155 , 
+    label: 'Auslastung'
+  } ]
+  @UI.lineItem: [ {
+    position: 155 , 
+    label: 'Auslastung'
+  } ]
+  @UI.selectionField: [ {
+    position: 155 
+  } ]
+  SeatPercentage;
+  
+  @UI.identification: [ {
+    position: 22 , 
+    label: 'Von'
+  } ]
+  @UI.lineItem: [ {
+    position: 22 , 
+    label: 'Von'
+  } ]
+  @UI.selectionField: [ {
+    position: 22 
+  } ]
+  AirportFromId;
+  
+  @UI.identification: [ {
+    position: 28 , 
+    label: 'Nach'
+  } ]
+  @UI.lineItem: [ {
+    position: 28 , 
+    label: 'Nach'
+  } ]
+  @UI.selectionField: [ {
+    position: 28 
+  } ]
+  AirportToId;
+  
+  @UI.identification: [ {
+    position: 110 , 
+    label: 'Abflugzeit'
+  } ]
+  @UI.lineItem: [ {
+    position: 110 , 
+    label: 'Abflugzeit'
+  } ]
+  @UI.selectionField: [ {
+    position: 110 
+  } ]
+  DepartureTime;
+  
+  @UI.identification: [ {
+    position: 120 , 
+    label: 'Ankuftszeit'
+  } ]
+  @UI.lineItem: [ {
+    position: 120 , 
+    label: 'Ankuftszeit'
+  } ]
+  @UI.selectionField: [ {
+    position: 120 
+  } ]
+  ArrivalTime;
+   @UI.identification: [ {
+    position: 121 , 
+    label: 'Dauer'
+  } ]
+  @UI.lineItem: [ {
+    position: 121 , 
+    label: 'Dauer'
+  } ]
+  @UI.selectionField: [ {
+    position: 121 
+  } ]
+  FlightDuration;
+  
+  @UI.identification: [ {
+    position: 130 , 
+    label: 'Entfernung'
+  } ]
+  @UI.lineItem: [ {
+    position: 130 , 
+    label: 'Entfernung'
+  } ]
+  @UI.selectionField: [ {
+    position: 130 
+  } ]
+  Distance;
+  
+  
+ 
+}
